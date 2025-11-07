@@ -6,14 +6,15 @@ struct ClimateExplorerView: View {
             ScrollView {
                 VStack(spacing: 20) {
                     LazyVGrid(columns: [
-                        GridItem(.flexible(), spacing: 16),
-                        GridItem(.flexible(), spacing: 16)
+                        GridItem(.flexible()),
+                        GridItem(.flexible())
                     ], spacing: 16) {
                         ForEach(climatePlaces) { place in
                             ClimateCardView(place: place)
                         }
                     }
-                    .padding()
+                    .padding(.horizontal, 16)
+                    .padding(.vertical, 20)
                 }
             }
             .navigationTitle("Natural Places")
